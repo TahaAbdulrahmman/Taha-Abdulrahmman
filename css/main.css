@@ -595,7 +595,7 @@ width: 100%;
   border-radius: 10px;
   transition: calc(var(--main-transition));
 }
-.contact .social :hover{
+.contact .social:hover{
   transform: translatey(-15px);
 }
 .contact .social .icon a{
