@@ -336,7 +336,7 @@ header nav ul li a:hover{
 @media(max-width:767px){
   .About .content .title,
   .About .content .text{
-    max-width: 280px;
+    max-width: 350px;
   }
 }
 .About .content .info p{
@@ -368,7 +368,7 @@ header nav ul li a:hover{
   }
   .About .content .info,
   .About .content .text{
-    width: 300px;
+    width: 350px;
   }
 }
 /* End About */
@@ -390,7 +390,7 @@ header nav ul li a:hover{
 }
 @media (max-width:767px) {
   .skills .skill{
-    width: 300px;
+    width: 350px;
   }
 }
 .skills .skill p{
@@ -423,7 +423,7 @@ header nav ul li a:hover{
 }
 @media (max-width:767px) {
   .skills .skill .prog{
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 .skills .skill .prog span{
@@ -575,7 +575,7 @@ width: 100%;
 }
 @media(max-width:767px){
   .my-work .boxs .box{
-    width: 340px;
+    width: 350px;
   }
 }
 .my-work .boxs .box p{
@@ -620,7 +620,7 @@ width: 100%;
 }
 @media(max-width:767px){
   .contact .container .text h2{
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 .contact .social{
