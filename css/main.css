@@ -635,11 +635,7 @@ width: 100%;
   border-radius: 10px;
   transition: calc(var(--main-transition));
 }
-<<<<<<< HEAD
 .contact .social .icon:hover{
-=======
-.contact .social:hover{
->>>>>>> 8e94bfdacf13958cfdf88a006b922934a6b22cb7
   transform: translatey(-15px);
 }
 .contact .social .icon a{
@@ -648,7 +644,6 @@ width: 100%;
   color: white;
   transition: calc(var(--main-transition) * 2);
 }
-
 .contact .social .face:hover a{
   color: #4867aa;
 }
