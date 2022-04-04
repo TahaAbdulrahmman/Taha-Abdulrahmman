@@ -95,11 +95,9 @@ header .close{
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: bold;
-  padding: 8px;
   color: var(--main-color);
-  border: 1px solid var(--main-color);
   border-radius: 50%;
   cursor: pointer;
 }
