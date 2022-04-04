@@ -329,12 +329,6 @@ header nav ul li a:hover{
 .About .content .info p:first-child{
   margin-top: 40px;
 }
-@media(max-width:767px){
-  .About .content .title,
-  .About .content .text{
-    max-width: 350px;
-  }
-}
 .About .content .info p{
   font-size: 20px;
   font-weight: bold;
@@ -362,7 +356,9 @@ header nav ul li a:hover{
   .About .content .info p{
     font-size: 13px;
   }
-  .About .content .info,
+}
+@media(max-width:767px){
+  .About .content .title,
   .About .content .text{
     width: 350px;
   }
