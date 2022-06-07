@@ -669,9 +669,11 @@ footer{
 footer .container{
   text-align: center;
 }
-footer .container p{
-  font-size: 20px;
-  font-weight: bold;
-  color: #dfdcdc;
+footer .container{
+  color: #ffffff;
 }
+footer .container .heart{
+  color: #00ff00;
+}
+
 /* End Footer */
