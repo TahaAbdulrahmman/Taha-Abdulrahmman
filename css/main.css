@@ -3,6 +3,7 @@
   --main-color:#2196f3;
   --second-color:#1787e0;
   --section-backgrond: #dfdcdc;
+  --hover-color: #d5d1d1;
   --p-color: #777;
   --main-padding: 90px;
   --main-transition: .3s;
@@ -136,7 +137,7 @@ header nav ul li a:not(a.Active)::before{
   transition: var(--main-transition);
 }
 header nav ul li a:not(a.Active)::before{
-  height: 4px;
+  height: 5px;
   background-color: var(--main-color);
 }
 header nav ul li a:not(a.Active)::after{
@@ -160,7 +161,7 @@ header nav ul li a:not(a.Active):hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--section-backgrond1);
+    background: var(--p-color);
     z-index: 10;
     display: flex;
     justify-content:  center;
@@ -277,11 +278,8 @@ section.landing:before {
 } 
 /* End Landing */
 /* Start About  */
-.About{
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
-  background-color: var(--section-backgrond2);
-  z-index: -1;
+section.About{
+  background-color: var(--section-backgrond);
 }
 .About .title>p{
   margin:10px 15px 0 0 ;
@@ -313,20 +311,6 @@ section.landing:before {
   background-color: white;
   z-index: 1;
 }
-.About .content .text p::before{
-  content:"";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transition: var(--main-transition);
-  background-color: var(--section-backgrond2);
-  z-index: -1;
-}
-.About .content .text p:hover::before{
-  width: 100%;
-}
 .About .content .info p:first-child{
   margin-top: 40px;
 }
@@ -339,17 +323,19 @@ section.landing:before {
   position: relative;
   z-index: 1;
 }
+.About .content .text p::before,
 .About .content .info p::before{
   content:"";
   position: absolute;
-  width: 0;
+  width: 0%;
   height: 100%;
   top: 0;
   left: 0;
-  transition: var(--main-transition);
-  background-color: var(--section-backgrond2);
+  transition:calc(var(--main-transition) * 2);
+  background-color:var(--hover-color);
   z-index: -1;
 }
+.About .content .text p:hover::before,
 .About .content .info p:hover::before{
   width: 100%;
 }
@@ -370,7 +356,6 @@ section.landing:before {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   background-color: var(--section-backgrond2);
-  z-index: -1;
 }
 .skills .container{
     display: flex;
@@ -390,7 +375,6 @@ section.landing:before {
   font-size: 25px;
   font-weight: bold;
   margin: 30px 10px 10px 0;
-  padding-left: 10px;
 }
 .skills .skill p>span{
   position: absolute;
@@ -431,11 +415,13 @@ section.landing:before {
 .services{
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  background-color: var(--section-backgrond1);
+  background-color: var(--section-backgrond);
 }
 .services .container .title{
   color: white;
   margin-bottom: 103px;
+  font-size: 30px;
+  color: var(--second-color);
 }
 .services .container .boxs{
   display: grid;
@@ -443,10 +429,10 @@ section.landing:before {
   gap: 40px;
 }
 .services .boxs .box{
-  background-color: rgba(21, 165, 25, 0.302);
+  background-color: #1786e0d3;
   transition: var(--main-transition);
   border-radius: 6px;
-  box-shadow: 0 3px 5px rgba(71, 196, 88, 0.966);
+  box-shadow: 0 3px 5px #000000a9;
   position: relative;
 }
 .services .boxs .box::after,
@@ -456,7 +442,7 @@ section.landing:before {
   top: 0;
   height: 4px;
   width: 0;
-  background-color: var(--main-color);
+  background-color: #09518b;
   transition: var(--main-transition);
 }
 .services .boxs .box::before{
@@ -534,14 +520,15 @@ section.landing:before {
 .my-work {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  background-color: var(--section-backgrond2);
-  z-index: -1;
+  background-color: var(--section-backgrond);
+  z-index: 2;
 }
 .my-work .container .title{
   margin-bottom: 70px;
 }
 .my-work .container .title h2{
   font-size: 50px;
+  color: var(--second-color);
 }
 .my-work .container .title p{
   margin-top: 10px;
@@ -549,7 +536,7 @@ section.landing:before {
 }
 .my-work .container .boxs{
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(450px ,1fr));
+  grid-template-columns: repeat(auto-fill , minmax(350px ,1fr));
   gap: 40px;
 }
 .my-work .boxs .box{
@@ -579,9 +566,9 @@ width: 100%;
   padding: 16px 20px ;
   width: 100%;
   font-size: 20px;
-  color: white;
+  color: var(--second-color);
   font-weight: bold;
-  background-color: hsla(151, 86%, 17%, 0.5);
+  background-color: var(--hover-color);
   transition: var(--main-transition);
 }
 .my-work .boxs .box:hover p{
