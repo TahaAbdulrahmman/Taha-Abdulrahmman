@@ -219,13 +219,14 @@ section.landing:before {
   height: 100%;
   width: 100%;
   background-color: #dfdcdc;
-  transform: skewy(-3deg)
+  transform: skewy(-3deg);
 }
 .landing .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .landing .container .content{
   position: relative;
