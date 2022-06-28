@@ -1,3 +1,4 @@
+
 let section = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills span");
 
