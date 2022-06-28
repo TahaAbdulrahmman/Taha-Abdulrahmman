@@ -193,6 +193,9 @@ header nav ul li a:not(a.Active):hover{
 }
 /* End Header */
 /* Start Landing  */
+section.landing{
+  background-color: white;
+}
 @media(min-width:992px){
   section.landing{
     height: calc(100vh - 131px);
@@ -211,12 +214,11 @@ header nav ul li a:not(a.Active):hover{
 section.landing:before {
   content: "";
   position: absolute;
-  top: -39px;
+  top: -50px;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--section-backgrond);
-  z-index: -1;
+  background-color: #dfdcdc;
   transform: skewy(-3deg)
 }
 .landing .container {
@@ -587,6 +589,7 @@ footer{
   position: relative;
   padding: 10px 0;
   background-color: black;
+  z-index: 2;
 }
 footer .container{
   display: flex;
