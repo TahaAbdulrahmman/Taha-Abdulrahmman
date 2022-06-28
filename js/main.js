@@ -3,7 +3,7 @@ let section = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills span");
 
 window.onscroll = function () {
-  if ((window.scrollY >= section.offsetTop - 200)) {
+  if ((window.scrollY >= section.offsetTop - 400)) {
     console.log("Reached Section Three");
     spans.forEach((span) => {
       span.style.width = span.dataset.width;
