@@ -48,19 +48,11 @@ a{
   }
 }
 section{
-  height: 100%;
   z-index:1;
   position: relative;
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   background-color: var(--section-backgrond);
-}
-@media (min-width:1200px) {
-  section.landing,
-  section.services,
-  section.my-work{
-    height: calc(100vh - 131px);
-  }
 }
 /* End global rols */
 /* Start Header  */
@@ -201,9 +193,14 @@ header nav ul li a:not(a.Active):hover{
 }
 /* End Header */
 /* Start Landing  */
-@media(max-width:991px){
+@media(min-width:992px){
   section.landing{
-    height: calc(100vh - 127px);
+    height: calc(100vh - 131px);
+  }
+} 
+@media(max-width:992px){
+  section.landing{
+    height: calc(100vh - 128px);
   }
 }
 @media(max-width:767px){
@@ -427,6 +424,11 @@ section.landing:before {
 }
 /* End Skills */
 /* Start Services */
+@media (min-width:1200px) {
+  section.services{
+    height: calc(100vh - 131px);
+  }
+}
 .services .container .title{
   color: white;
   margin-bottom: 103px;
@@ -527,6 +529,21 @@ section.landing:before {
 }
 /* End Services  */
 /* Start My Work  */
+@media(min-width:992px){
+  section.my-work{
+    height: calc(100vh - 131px);
+  }
+} 
+@media(max-width:991px){
+  section.my-work{
+    height: calc(100vh - 128px);
+  }
+} 
+@media(max-width:767px){
+  section.my-work{
+    height: calc(100vh - 160px);
+  }
+} 
 .my-work .container .title{
   margin-bottom: 70px;
 }
@@ -538,49 +555,31 @@ section.landing:before {
   margin-top: 10px;
   margin-left: 60px;
 }
-.my-work .container .boxs{
-  display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(330px ,1fr));
-  gap: 30px;
-}
-.my-work .boxs .box{
-  background-color: white;
-  transition: var(--main-transition);
-  border-radius: 10px;
-  box-shadow: 0 3px 5px white;
-  position: relative;
-  overflow: hidden;
-}
-.my-work .boxs .box:hover{
-  transform: translateY(-10px);
-}
-.my-work img{
+.my-work .swiper {
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-@media(max-width:767px){
-  .my-work .boxs .box{
-    width: 350px;
-    overflow: hidden;
-  }
-  .my-work .image{
-    width: 350px;
-  }
+.my-work .box{
+  box-shadow: rgb(47 145 223 / 40%) 0 2px 10px 4px;
+}
+  .my-work .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+}
+.my-work .swiper-slide img {
+  display: block;
+  width: 100%;
 }
 .my-work .boxs .box p{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -100px;
-  padding: 16px 20px ;
+  padding: 5px  0;
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
+  text-align: center;
   color: var(--second-color);
   font-weight: bold;
   background-color: var(--hover-color);
-  transition: var(--main-transition);
-}
-.my-work .boxs .box:hover p{
-  bottom: 0;
 }
 /* End My Work */
 /* Start Footer  */

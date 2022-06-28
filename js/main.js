@@ -1,6 +1,3 @@
-// Start move text
-AOS.init({ duration: 1100, once: true });
-// Emd  move text
 let section = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills span");
 
@@ -20,7 +17,12 @@ let close = document.querySelector(".close");
 toggler.onclick = function () {
   nav.classList.add("open");
 };
-//  End toggle
 close.onclick = function () {
   this.parentElement.classList.remove("open");
 };
+//  End toggle
+
+// Start move text
+AOS.init({ duration: 1100, once: true });
+// Emd  move text
+
