@@ -13,6 +13,8 @@
     <!-- Animate On Scroll  -->
     <link rel="stylesheet" href="css/aos.css" />
     <!-- Css file -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
     <link rel="stylesheet" href="css/main.css" />
     <!--Googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,72 +27,225 @@
   <body>
     <!-- Start Header -->
     <!-- End Header -->
-    <header>
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="images/logo.webp" alt="" />
-        </a>
-        <i class="fa-solid fa-bars fa-2x toggle"></i>
-        <nav class="nav-bar" >
-          <span class="close">X</span>
-          <ul>
-            <li><a href="index.html" class="Active">Home</a></li>
-            <li><a href="html/about.html" class="">About</a></li>
-            <li><a href="html/services.html" class="">Services</a></li>
-            <li><a href="html/my-work.html" class="">My-work</a></li>
+    <header class="w-full ">
+      <div class="container space-between p-relative">
+        <div class="image">
+          <img class="logo w-full rad-half" src="images/logo.webp" alt="">
+        </div>
+        <nav class="flex-end">
+          <i  id="toggle" class="fa-solid fa-bars fa-2x block-mobile  toggle"></i>
+          <ul class="d-flex hide-mobiles">
+            <span id="close" class="close">X</span>
+            <li><a href="#" class="active p-15 p-relative">Home</a></li>
+            <li><a href="#about" class="p-15 p-relative">About</a></li>
+            <li><a href="#services" class="p-15 p-relative">Servises</a></li>
+            <li><a href="#mywork" class="p-15 p-relative">MyWork</a></li>
+            <img id="icon" src="/images/moon.png" alt="" />
           </ul>
         </nav>
       </div>
     </header>
     <section class="landing">
-      <div class="container">
-        <div class="content">
-          <div class="text" data-aos="fade-right">
-            <!-- data-aos="fade-right" -->
-            <h1>Hello, I'am Taha</h1>
-            <p>
-              I am a passionate front end developer with experience in web
-              applications
-            </p>
-          </div>
-          <div class="image" data-aos="fade-left">
-            <img src="images/land.png" alt="" />
+      <div class="container space-between vh-h-section">
+        <div class="text p-20 rad-10" data-aos="fade-right">
+          <!-- data-aos="fade-right" -->
+          <h1 class="c-secondary mb-10">Hello, I'am Taha</h1>
+          <h2 class="c-secondary fs-20">
+            I am a passionate front end developer with experience in web
+            applications
+          </h2>
+        </div>
+        <div class="image" data-aos="fade-left">
+          <img src="images/land.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Start About -->
+    <section class="about c-flex" id="about">
+      <div class="container pt-30">
+        <div class="head pt-20 mb-50">
+          <h1 class="c-blue mt-20" >About Me</h1>
+          <h2 class="ml-10 mt-10">If you do work right,it will last forever</h2>
+        </div>
+        <div class="aboutcontent c-flex p-relative ">
+          <img class="w-half" src="../images/about.png" alt="" data-aos="fade-right"/>
+          <div class="content c-secondary" data-aos="fade-left">
+            <div class="text ">
+              <p class="fs-20 fw-bold bg-theme mt-15 z-1 p-relative p-15 l-s-8 c-secondary rad-10 ">
+                I am a front end developer with quite a bit of experience creating
+                scalable web applications I am always updating and improving my
+                technical skills in HTML5, CSS3, JS
+              </p>
+            </div>
+            <div class="info">
+              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Name: Taha Abdulrahman</p>
+              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Age: 25</p>
+              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Email: tahaabdalrahman97@gmail.com</p>
+              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Adrress: Fayoum from Egypt</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <footer>
-      <div class="container">
-        <p class="text">
-          Made With
-          <i class="fa fa-heart c-main heart"></i>
-          By Taha Abdulrahmman © 2022
-        </p>
-        <div class="mysocial">
-          <a
-            href="https://www.facebook.com/profile.php?id=100012525938175"
-            class="face"
-            target="_blank"
-            ><i class="fab fa-facebook-f fa-2x"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/taha_abdulrahmman/"
-            class="insta"
-            target="_blank"
-            ><i class="fa-brands fa-instagram-square fa-2x"></i
-          ></a>
-          <a
-            href="https://github.com/TahaAbdulrahmman"
-            class="git"
-            target="_blank"
-            ><i class="fab fa-github-square fa-2x"></i
-          ></a>
-          <a href="https://wsend.co/201019893766" class="whats" target="_blank"
-            ><i class="fab fa-whatsapp-square fa-2x"></i
-          ></a>
+    <!-- End About -->
+    <section class="skills margin-section" >
+      <div class="container c-flex ">
+        <div class="content"">
+          <div class="head pt-20 mb-50" >
+            <h1 class="c-blue mt-20" >My Skills</h1>
+          </div>
+          <div class="skill" data-aos="fade-right">
+            <p>html <span>85%</span> </p>
+            <div class="prog">
+              <span style="width: 0" data-width="85%" ></span>
+            </div>
+          </div>
+          <div class="skill" data-aos="fade-left">
+            <p>css <span>80%</span></p>
+            <div class="prog">
+              <span style="width: 0" data-width="80%" ></span>
+            </div>      
+          </div>
+          <div class="skill" data-aos="fade-right">
+            <p>html & css <span>85%</span></p>
+            <div class="prog">
+              <span style="width: 0" data-width="85%" ></span>
+            </div>      
+          </div>
+          <div class="skill" data-aos="fade-left">
+            <p>javaScript <span>55%</span></p>
+            <div class="prog">
+              <span style="width: 0" data-width="55%"></span>
+            </div>      
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <!-- Start Services -->
+    <section class="services c-flex" id="services">
+      <div class="container pt-30 ">
+        <div class="head pt-20 pb-20">
+          <h1 class="c-blue mt-20">Services</h1>
+          <h2 class="ml-10 mt-10">Don't be busy, be productive</h2>
+        </div>
+        <div class="boxs" data-aos="fade-up">
+          <div class="box">
+            <div class="image">
+              <h3>Security</h3>
+              <img src="../images/serv/serv1.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <h3>Fully Responsive</h3>
+              <img src="../images/serv/serv2.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <h3>PSD Design</h3>
+              <img src="../images/serv/serv3.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <h3>Customer Support</h3>
+              <img src="../images/serv/serv4.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <h3>Design Trends</h3>
+              <img src="../images/serv/serv5.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <h3>High Quality</h3>
+              <img src="../images/serv/serv6.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <!-- End Services -->
+    <!-- Start My Work -->
+    <section class="mywork " id="mywork">
+      <div class="container">
+        <div class="head pt-20 mb-50">
+          <h1 class="c-blue mt-20">My Work</h1>
+          <h2 class="ml-10 mt-10">The joy of life at work</h2>
+        </div>
+        <div class="work swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a  href="https://tahaabdulrahmman.github.io/NMEC/"  target="_blank"  class="image"  >
+                <div class="image">
+                  <img src="images/work/nmec.png" alt="" />
+                </div>
+              </a>
+              <!-- <p>NMEC</p> -->
+            </div>
+            <div class="swiper-slide">
+              <a href="https://tahaabdulrahmman.github.io/Elzero/" target="_blank" class="image" >
+                <div class="image">
+                  <img src="images/work/elzero.png" alt="" />
+                </div>
+              </a>
+              <!-- <p>Elzero</p> -->
+            </div>
+            <div class="swiper-slide">
+              <a href="https://tahaabdulrahmman.github.io/Kasper/" target="_blank" class="image" >
+                <div class="image">
+                  <img src="images/work/kasper.png" alt=""/>
+                </div>
+              </a>
+              <!-- <p>Kasper</p> -->
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- End My Work -->
+    <div class="scrolltop">
+      <button class="b-none o-none bg-blue rad-6 c-primary" id="scrolltop"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <footer>
+        <div class="container">
+          <p class="text">
+            Made With
+            <i class="fa fa-heart c-main heart"></i>
+            By Taha Abdulrahmman © 2022
+          </p>
+          <div class="mysocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=100012525938175"
+              class="face"
+              target="_blank"
+              ><i class="fab fa-facebook-f fa-2x"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/taha_abdulrahmman/"
+              class="insta"
+              target="_blank"
+              ><i class="fa-brands fa-instagram-square fa-2x"></i
+            ></a>
+            <a
+              href="https://github.com/TahaAbdulrahmman"
+              class="git"
+              target="_blank"
+              ><i class="fab fa-github-square fa-2x"></i
+            ></a>
+            <a href="https://wsend.co/201019893766" class="whats" target="_blank"
+              ><i class="fab fa-whatsapp-square fa-2x"></i
+            ></a>
+          </div>
+        </div>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
