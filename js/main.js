@@ -61,13 +61,14 @@ scrolltop.addEventListener("click", function () {
 // }
 /////////////////////////////  Dark-Theme  /////////////////////////////
 let icon = document.getElementById("icon");
+console.log(icon.src)
 icon.onclick = function () {
   document.body.classList.toggle("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
-    icon.src = "/images/sun.png";
+    icon.src ="images/sun.webp";
     document.body.style.backgroundColor = "#202124";
   } else {
-    icon.src = "/images/moon.png";
+    icon.src ='images/moon.webp';
     document.body.style.backgroundColor = "#afadad66";
   }
 };
