@@ -2,6 +2,7 @@
 
 let toggle = document.getElementById("toggle");
 let btnClose = document.getElementById("close");
+let header = document.querySelector("header");
 let nav = document.querySelector("header nav");
 let ul = document.querySelector("header nav ul");
 toggle.onclick = function () {
@@ -23,18 +24,6 @@ lis.forEach(function (ele) {
     ul.classList.remove("open")
   };
 });
-/////////////////////////////  Focus  /////////////////////////////
-/*
-let user = document.getElementById("user");
-let pass = document.getElementById("pass");
-window.addEventListener("load", function () {
-  user.focus();
-});
-user.onblur = function () {
-  pass.focus();
-};
-console.log(user);
-*/
 /////////////////////////////  Scroll   /////////////////////////////
 window.addEventListener("scroll", function () {
   if (scrollY <= 500) {
@@ -50,15 +39,6 @@ scrolltop.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
-
-/////////////////////////////      /////////////////////////////
-// if (localStorage.length > 0) {
-//   document.body.style.backgroundColor = localStorage.color
-// }
-// function setColor(color) {
-//   localStorage.colors = color
-//   document.body.style.backgroundColor = color
-// }
 /////////////////////////////  Dark-Theme  /////////////////////////////
 let icon = document.getElementById("icon");
 console.log(icon.src)
@@ -67,9 +47,11 @@ icon.onclick = function () {
   if (document.body.classList.contains("dark-theme")) {
     icon.src ="images/sun.webp";
     document.body.style.backgroundColor = "#202124";
+    header.style.backgroundColor = "#202124";
   } else {
     icon.src ='images/moon.webp';
     document.body.style.backgroundColor = "#afadad66";
+    header.style.backgroundColor = "#dfdede";
   }
 };
 //////////////////////////////////////////////////////////////////////////////
@@ -78,7 +60,9 @@ AOS.init(
   {duration:1100,
   once:true,}
 );
-// Emd  move text 
+// Emd  move text
+
+
 let section = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills span");
 window.onscroll = function () {
