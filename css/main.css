@@ -7,6 +7,11 @@ header{
   padding-top: 5px;
   background-color: #dfdede;
 }
+@media (max-width:991px) {
+  header .container{
+    width: 98%;
+  }
+}
 header nav{
   flex:1;
 }
@@ -95,10 +100,25 @@ ul.open{
   }
   header ul li{
     width: 100%;
+    position: absolute;
+    
+  }
+  header ul li:nth-child(2){
+    top: 150px;
+  }
+  header ul li:nth-child(3){
+    top: 200px;
+  }
+  header ul li:nth-child(4){
+    top: 250px;
+  }
+  header ul li:nth-child(5){
+    top: 300px;
   }
   header ul li a{
     margin: auto 0;
     text-align: center;
+    border-radius: 0;
   }
   header ul li a.active{
     color: white;
