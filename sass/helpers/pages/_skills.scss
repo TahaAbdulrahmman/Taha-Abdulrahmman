@@ -1,0 +1,7 @@
+@use "./../layout/colors" as *;
+@use "./../layout/golbal-rols" as *;
+.skills .container .box{
+  width: fit-content;
+  padding: 35px 70px;
+  border-radius: 20px;
+}

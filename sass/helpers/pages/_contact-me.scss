@@ -1,0 +1,43 @@
+@use "./../layout/colors" as *;
+@use "./../layout/golbal-rols" as *;
+
+.contact-me .container {
+  .info {
+    background-color: #8f8d8b;
+    width: 400px;
+    min-height: 600px;
+
+    div {
+      border-radius: 1rem;
+    }
+
+    @include breakpoints(mobile) {
+      max-width:100%;;
+    }
+
+    @include breakpoints(medium) {
+      width: 300px;
+    }
+  }
+
+  form {
+    min-height: 600px;
+    flex: 1;
+    textarea {
+      width: 300px;
+      height: 250px;
+      background-color: $therd-color;
+    }
+    input {
+      background-color: $therd-color;
+      border: none;
+    }
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
+    @include breakpoints(medium) {
+      width: 100%;
+    }
+  }
+
+}

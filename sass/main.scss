@@ -1,0 +1,107 @@
+@use "./helpers/layout/golbal-rols" as *;
+@use "./helpers/layout/colors" as *;
+@use "./helpers/pages/landing" as *;
+@use "./helpers/pages/about" as *;
+@use "./helpers/pages/skills" as *;
+@use "./helpers/pages/services" as *;
+@use "./helpers/pages/mywork" as *;
+@use "./helpers/pages/contact-me" as *;
+@use "./helpers/pages/dotteloading" as *;
+body {
+  background-color: $therd-color;
+  overflow: hidden;
+}
+
+header {
+  background-color: #3c3b3a;
+  min-height: 65px;
+  .container .navbar {
+    .navbar-brand {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    ul a {
+      color: $main-color;
+      position: relative;
+      margin: 0 1x;
+      &.active {
+        color: $therd-color;
+        background-color: $main-color;
+        border-radius: 15px;
+      }
+      &:not(.active)::after,
+      &:not(.active):before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        z-index: -3;
+        border-radius: 15px;
+        background-color: $main-color;
+        transition: $main-transition;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+      &:hover {
+        color: $therd-color;
+      }
+      &:hover:after,
+      &:hover:before {
+        width: 70%;
+      }
+    }
+  }
+}
+footer {
+  background-color: #3c3b3a;
+  .container {
+    .heart {
+      color: #0ac22f;
+    }
+    .mysocial {
+      a {
+        color: $therd-color;
+      }
+      a.face:hover {
+        color: white;
+        background-color: #4867aa;
+      }
+      a.insta:hover {
+        color: white;
+        background-color: #fbad50;
+      }
+      a.git:hover {
+        color: white;
+        background-color: #ff9933;
+      }
+      a.whats:hover {
+        color: white;
+        background-color: #56f074;
+      }
+    }
+  }
+}
+.loading {
+  z-index: 1100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #212529;
+}
+.btnscroll {
+  display: none;
+}
+
+

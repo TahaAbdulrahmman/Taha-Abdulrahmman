@@ -1,0 +1,26 @@
+@use "./../layout/colors" as *;
+@use "./../layout/golbal-rols" as *;
+.landing{
+  height: calc(100vh - 65px);
+  .container .text{
+    border-radius: 50px;
+    width: 500px;
+  }
+  .image{
+    height: 600px;
+    img{
+      height: 100%;
+      border-radius: 50%;
+      transform: translateY(10px);
+      animation: up-down 3s ease-in-out infinite alternate;
+    }
+  }
+}
+@keyframes up-down {
+  0%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform:translateY(-50px);
+  }
+}

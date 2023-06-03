@@ -1,0 +1,40 @@
+@use "./../layout/colors" as *;
+@use "./../layout/golbal-rols" as *;
+.image img{
+    transform: translateY(15px);
+    animation: up-down 5s ease-in-out infinite alternate;
+  }
+
+.about .container .info{
+  p{
+    border-radius: 20px;
+    border: 1px solid $second-color;
+    position: relative;
+    z-index: 2;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      transition: $main-transition.3s;
+      border-radius: 20px;
+      background-color: $therd-color;
+      z-index: -1;
+    }
+    &:hover::before{
+      width: 100%;
+    }
+  }
+  a{
+    color: $therd-color;
+    background-color: $main-color;
+    border-radius: 15px;
+    width: fit-content;
+    &:hover{
+      background-color: #dbaf39;
+      color: $second-color;
+    }
+  }
+}

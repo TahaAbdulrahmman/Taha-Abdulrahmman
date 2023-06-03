@@ -1,0 +1,21 @@
+@use "./../layout/colors" as *;
+@use "./../layout/golbal-rols" as *;
+.mywork .container .boxs{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  minmax(350px, 1fr));
+  gap: 20px;
+  .box {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    .caption{
+      position: absolute;
+      left: 0%;
+      bottom: -100%;
+      background-color: rgba(24, 24, 24, 0.5);
+    }
+    &:hover .caption{
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "./../layout/colors" as *;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+$main-transition: 0.5s;
+
+.main-transition {
+  transition: $main-transition;
+}
+section {
+  margin: 100px 0;
+  padding: 100px 0 100px;
+}
+.title-section {
+  margin-bottom: 80px;
+  h3 {
+    letter-spacing: 1px;
+  }
+
+  > p {
+    margin-bottom: -5px;
+  }
+}
+
+.rad-10 {
+  border-radius: 10px;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsla(44, 100%, 73%, 0.6);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: hsla(44, 100%, 73%, 0.155);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: $main-color;
+}
+
+/// media quarry
+@mixin breakpoints($point) {
+  @if $point == mobile {
+    @media (max-width: 776px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 778px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) and (max-width: 1399) {
+      @content;
+    }
+  } @else if $point == xlarge {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}

@@ -1,100 +1,120 @@
-/////////////////////////////  Navbar  /////////////////////////////
-
-let toggle = document.getElementById("toggle");
-let btnClose = document.getElementById("close");
-let header = document.querySelector("header");
-let nav = document.querySelector("header nav");
-let ul = document.querySelector("header nav ul");
-let logo = document.querySelector("header .image #logo");
-toggle.onclick = function () {
-  ul.classList.add("open");
-};
-btnClose.onclick = function () {
-  ul.classList.remove("open");
-};
-
-let lis = document.querySelectorAll("header nav ul li a");
-lis.forEach(function (ele) {
-  ele.onclick = function () {
-    // Remove Active Class From All Elements
-    lis.forEach(function (ele) {
-      ele.classList.remove("active");
-    });
-    // Add Active Class To This Element
-    this.classList.add("active");
-    ul.classList.remove("open");
-  };
+let switchClass = document.querySelectorAll("header a")
+switchClass.forEach((el)=>{
+  el.addEventListener("click",function(){
+    switchClass.forEach((el1)=>{
+      el1.classList.remove("active")
+      this.classList.add("active")
+    })
+  });
 });
-/////////////////////////////  Scroll   /////////////////////////////
-window.addEventListener("scroll", function () {
-  if (scrollY <= 500) {
-    scrolltop.style.display = "none";
-  } else {
-    scrolltop.style.display = "block";
+/////////////////// Btn Scroll ///////////////////
+let btnScroll =document.querySelector(".btnscroll");
+let homeClass =document.querySelector("nav .home");
+let logoClass =document.querySelector("nav #logo");
+window.addEventListener("scroll",function(){  
+  if(scrollY < 500){
+    btnScroll.classList.add("block")
+  }else{
+    btnScroll.classList.add("btnscroll")
   }
-});
-scrolltop.addEventListener("click", function () {
+})
+btnScroll.addEventListener("click",scrollTop0)
+homeClass.addEventListener("click",scrollTop0)
+logoClass.addEventListener("click",scrollTop0)
+function scrollTop0(){
   scroll({
     left: 0,
     top: 0,
     behavior: "smooth",
   });
-  lis.forEach(function (ele) {
-    ele.classList.remove("active");
-  });
-});
-logo.addEventListener("click", function () {
-  scroll({
-    left: 0,
-    top: 0,
-    behavior: "smooth",
-  });
-  lis.forEach(function (ele) {
-    ele.classList.remove("active");
-  });
-});
-/////////////////////////////  Dark-Theme  /////////////////////////////
-let icon = document.getElementById("icon");
-console.log(icon.src);
-icon.onclick = function () {
-  document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-    icon.src = "images/sun.webp";
-    document.body.style.backgroundColor = "#202124";
-    header.style.backgroundColor = "#202124";
-  } else {
-    icon.src = "images/moon.webp";
-    document.body.style.backgroundColor = "#afadad66";
-    header.style.backgroundColor = "#dfdede";
-  }
+  ClassHome();
+  btnScroll.style.display ="none"
 };
-//////////////////////////////////////////////////////////////////////////////
-// Start move text
-AOS.init({ duration: 1100, once: true });
-// Emd  move text
+/////////////////// Swithe Active Class OnScroll ///////////////////
 
-let section = document.querySelector(".skills");
-let spans = document.querySelectorAll(".skills span");
-window.onscroll = function () {
-  if (window.scrollY >= section.offsetTop - 400) {
-    console.log("Reached Section Three");
-    spans.forEach((span) => {
-      span.style.width = span.dataset.width;
+var sections = document.querySelectorAll("section");
+onscroll = function () {
+  var scrollPosition = document.documentElement.scrollTop;
+  sections.forEach((section) => {
+    if (
+      scrollPosition >= section.offsetTop - section.offsetHeight * .25 &&
+      scrollPosition <
+        section.offsetTop + section.offsetHeight - section.offsetHeight
+    ) {
+      var currentId = section.attributes.id.value;
+      removeAllActiveClasses();
+      addActiveClass(currentId);
+    }
+    ClassHome()
+  });
+};
+// Add Class active  to Home
+function ClassHome(){
+  if(scrollY == 0){
+    switchClass.forEach((el1)=>{
+      el1.classList.remove("active")
+      homeClass.classList.add("active")
+    })
+  }
+}
+var removeAllActiveClasses = function () {
+  document.querySelectorAll("nav a").forEach((el) => {
+    el.classList.remove("active");
+  });
+};
+var addActiveClass = function (id) {
+  var selector = `nav a[href="#${id}"]`;
+  document.querySelector(selector).classList.add("active");
+};
+var navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    var currentId = e.target.attributes.href.value;
+    var section = document.querySelector(currentId);
+    var sectionPos = section.offsetTop;
+    window.scroll({
+      top: sectionPos,
+      behavior: "smooth",
     });
-  }
-};
-
-//  Initialize Swiper
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  });
 });
+
+/////////////////// Send Data To Email///////////////////
+let form =document.querySelector("form")
+let nameInput =document.querySelector("form #name")
+let emailInput =document.querySelector("form #email")
+let messageInput =document.querySelector("form #message")
+
+const btn = document.getElementById('button');
+document.getElementById('form')
+.addEventListener('submit', function(event) {
+  event.preventDefault();
+  btn.value = 'Sending...';
+  const serviceID = 'default_service';
+  const templateID = 'template_6b45tlb';
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send';
+      alert(JSON.stringify(err));
+    });
+    clearData()
+});
+function clearData(){
+  nameInput.value = "",
+  emailInput.value = "",
+  messageInput.value = ""
+}
+let loadPage = document.querySelector(".loading")
+let timeload = document.querySelector("iframe")
+window.addEventListener("load",function(){
+  setTimeout(function cleariframe(){
+    scrollTop0()
+    document.body.style.overflow = "unset";
+    loadPage.remove()
+    timeload.remove()
+  },2000)
+})

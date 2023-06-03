@@ -1,0 +1,36 @@
+@use "./../layout/golbal-rols" as *;
+@use "./../layout/colors" as *;
+.services .container .boxs{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  minmax(300px, 1fr));
+  gap: 40px;
+  .box{
+    padding: 40px 80px;
+    &:hover{
+      transform: translateY(-10px);
+    }
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      top: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: $main-color;
+      transition: $main-transition;
+    }
+    &::before{
+      left: 9px;
+    }
+    &::after{
+      right: 9px;
+    }
+    &:hover::before,
+    &:hover::after{
+      width: 50%;
+    }
+    img{
+      width: 100px;
+    }
+  }
+}
