@@ -1,251 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taha-AbdulRahman</title>
-    <link rel="icon" type="image/x-icon" href="images/tab-logo.webp" />
-    <!-- fontes Awesome library-->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Normalize css -->
-    <link rel="stylesheet" href="css/mormalize.css" />
-    <!-- Animate On Scroll  -->
-    <link rel="stylesheet" href="css/aos.css" />
-    <!-- Css file -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/framework.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <!--Googlefonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Start Header -->
-    <!-- End Header -->
-    <header class="w-full ">
-      <div class="container space-between p-relative">
-        <div class="image">
-          <img id="logo" class="logo w-full rad-half" src="images/logo.webp" alt="">
-        </div>
-        <nav class="flex-end">
-          <i  id="toggle" class="fa-solid fa-bars fa-2x block-mobile toggle"></i>
-          <ul class="d-flex hide-mobiles">
-            <span id="close" class="close">X</span>
-            <li><a href="#" class="active p-relative">Home</a></li>
-            <li><a href="#about" class=" p-relative">About</a></li>
-            <li><a href="#services" class=" p-relative">Servises</a></li>
-            <li><a href="#mywork" class=" p-relative">MyWork</a></li>
-            <img id="icon" src="images/moon.webp" alt="" />
+<html lang="en" style="scrollbar-color: red;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taha-AbdulRahman</title>
+  <link rel="icon" type="image/x-icon" href="imgs/tab-logo.png" />
+  <!-- fontes Awesome library-->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Normalize css -->
+  <link rel="stylesheet" href="css/mormalize.css" />
+  <!-- webfonts -->
+  <link rel="stylesheet" href="webfonts/fa-regular-400.ttf">
+  <link rel="stylesheet" href="webfonts/fa-solid-900.ttf">
+  <link rel="stylesheet" href="webfonts/fa-solid-900.woff2">
+  <link rel="stylesheet" href="webfonts/fa-v4compatibility.ttf">
+  <link rel="stylesheet" href="webfonts/fa-v4compatibility.woff2">
+  <!-- Css file -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="sass/main.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">  emailjs.init('gn5U7Aws_CzlHviR9')</script>
+</head>
+
+</head>
+
+<body>
+  <header class="sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0 ">
+        <a class="navbar-brand m-0 p-0" href="#">
+          <img id="logo" class="rounded-circle" src="imgs/logo.webp " alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main"
+          aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </button>
+        <div class="collapse navbar-collapse mt-2" id="main">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item text-center">
+              <a class="home nav-link me-1 ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize active"
+                href="#">home</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link me-1 ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize"
+                href="#about">about</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link me-1 ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize" href="#skills">my
+                skills</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link me-1 ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize"
+                href="#services">services</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link me-1 ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize" href="#mywork">my
+                work</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link ps-3 pe-3 fs-6 fw-bold second-color main-transition text-capitalize"
+                href="#contact-me">contact me</a>
+            </li>
           </ul>
-        </nav>
-      </div>
-    </header>
-    <section id="landing" class="landing">
-      <div class="container space-between vh-h-section">
-        <div class="text p-20 rad-10" data-aos="fade-right">
-          <!-- data-aos="fade-right" -->
-          <h1 class="c-secondary mb-10">Hello, I'am Taha</h1>
-          <h2 class="c-secondary fs-20">
-            front end developer
-          </h2>
         </div>
-        <div class="image" data-aos="fade-left">
-          <img src="images/land.webp" alt="" />
-        </div>
-      </div>
-    </section>
-    <!-- Start About -->
-    <section class="about c-flex" id="about">
-      <div class="container pt-30">
-        <div class="head pt-20 mb-50">
-          <h1 class="c-blue mt-20" >About Me</h1>
-          <h2 class="ml-10 mt-10">If you do work right,it will last forever</h2>
-        </div>
-        <div class="aboutcontent c-flex p-relative ">
-          <img class="w-half" src="images/about.svg" alt="" data-aos="fade-right"/>
-          <div class="content c-secondary" data-aos="fade-left">
-            <div class="text ">
-              <p class="fs-20 fw-bold bg-theme mt-15 z-1 p-relative p-15 l-s-8 c-secondary rad-10 ">
-                I am a front end developer with quite a bit of experience creating
-                scalable web applications I am always updating and improving my
-                technical skills in HTML5, CSS3, JS
-              </p>
-            </div>
-            <div class="info">
-              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Name: Taha Abdulrahman</p>
-              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Age: 25</p>
-              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Email: tahaabdalrahman97@gmail.com</p>
-              <p class="fs-20 fw-bold mt-15 z-1 p-relative p-15 l-s-8 c-secondary bg-theme rad-10">Adrress: Fayoum from Egypt</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End About -->
-    <section class="skills margin-section" >
-      <div class="container c-flex ">
-        <div class="content"">
-          <div class="head pt-20 mb-50" >
-            <h1 class="c-blue mt-20" >My Skills</h1>
-          </div>
-          <div class="skill" data-aos="fade-right">
-            <p>html <span>85%</span> </p>
-            <div class="prog">
-              <span style="width: 0" data-width="85%" ></span>
-            </div>
-          </div>
-          <div class="skill" data-aos="fade-left">
-            <p>css <span>80%</span></p>
-            <div class="prog">
-              <span style="width: 0" data-width="80%" ></span>
-            </div>      
-          </div>
-          <div class="skill" data-aos="fade-right">
-            <p>html & css <span>85%</span></p>
-            <div class="prog">
-              <span style="width: 0" data-width="85%" ></span>
-            </div>      
-          </div>
-          <div class="skill" data-aos="fade-left">
-            <p>javaScript <span>55%</span></p>
-            <div class="prog">
-              <span style="width: 0" data-width="55%"></span>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Start Services -->
-    <section class="services c-flex" id="services">
-      <div class="container pt-30 ">
-        <div class="head pt-20 pb-20">
-          <h1 class="c-blue mt-20">Services</h1>
-          <h2 class="ml-10 mt-10">Don't be busy, be productive</h2>
-        </div>
-        <div class="boxs" data-aos="fade-up">
-          <div class="box">
-            <div class="image">
-              <h3>Security</h3>
-              <img src="images/serv/serv1.webp" alt="" />
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <h3>Fully Responsive</h3>
-              <img src="images/serv/serv2.webp" alt="" />
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <h3>PSD Design</h3>
-              <img src="images/serv/serv3.webp" alt="" />
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <h3>Customer Support</h3>
-              <img src="images/serv/serv4.webp" alt="" />
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <h3>Design Trends</h3>
-              <img src="images/serv/serv5.webp" alt="" />
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <h3>High Quality</h3>
-              <img src="images/serv/serv6.webp" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> 
-    <!-- End Services -->
-    <!-- Start My Work -->
-    <section class="mywork " id="mywork">
-      <div class="container">
-        <div class="head pt-20 mb-50">
-          <h1 class="c-blue mt-20">My Work</h1>
-          <h2 class="ml-10 mt-10">The joy of life at work</h2>
-        </div>
-        <div class="work swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a  href="https://tahaabdulrahmman.github.io/NMEC/"  target="_blank"  class="image"  >
-                <div class="image">
-                  <img src="images/work/nmec.webp" alt="" />
-                </div>
-              </a>
-              <!-- <p>NMEC</p> -->
-            </div>
-            <div class="swiper-slide">
-              <a href="https://tahaabdulrahmman.github.io/Elzero/" target="_blank" class="image" >
-                <div class="image">
-                  <img src="images/work/elzero.webp" alt="" />
-                </div>
-              </a>
-              <!-- <p>Elzero</p> -->
-            </div>
-            <div class="swiper-slide">
-              <a href="https://tahaabdulrahmman.github.io/Kasper/" target="_blank" class="image" >
-                <div class="image">
-                  <img src="images/work/kasper.webp" alt=""/>
-                </div>
-              </a>
-              <!-- <p>Kasper</p> -->
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      
-    </section>
-    <!-- End My Work -->
-    <div class="scrolltop">
-      <button class="b-none o-none bg-blue rad-6 c-primary" id="scrolltop"><i class="fa-solid fa-arrow-up"></i></button>
+      </nav>
     </div>
-    <footer>
-        <div class="container">
-          <p class="text">
-            Made With
-            <i class="fa fa-heart c-main heart"></i>
-            By Taha Abdulrahmman © 2022
-          </p>
-          <div class="mysocial">
-            <a
-              href="https://www.facebook.com/profile.php?id=100012525938175"
-              class="face"
-              target="_blank"
-              ><i class="fab fa-facebook-f fa-2x"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/taha_abdulrahmman/"
-              class="insta"
-              target="_blank"
-              ><i class="fa-brands fa-instagram-square fa-2x"></i
-            ></a>
-            <a
-              href="https://github.com/TahaAbdulrahmman"
-              class="git"
-              target="_blank"
-              ><i class="fab fa-github-square fa-2x"></i
-            ></a>
-            <a href="https://wsend.co/201019893766" class="whats" target="_blank"
-              ><i class="fab fa-whatsapp-square fa-2x"></i
-            ></a>
-          </div>
+  </header>
+  <!-- End Header -->
+  <!-- Start landing -->
+  <div id="landing" class="landing pt-0 mt-0 d-flex align-items-center">
+    <div class="container d-flex justify-content-around align-items-center ">
+      <div class="text p-5 fs-4 bg-p text-capitalize">
+        <p class="m-0  ms-1 mw-100 second-color">Hello,I'am </p>
+        <h1 class="fw-bold mb-0 main-color"> Taha AbdulRahman</h1>
+        <p class="ms-2 fs-5 second-color mw-100">
+          Junior front end developer
+        </p>
+      </div>
+      <div class="image d-none d-lg-block">
+        <img src="imgs/land.webp" alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- End landing -->
+  <!-- Start About -->
+  <section class="about" id="about">
+    <div class="title-section text-center">
+      <p class="text-capitalize fs-5 fw-normal p-color">intro</p>
+      <h3 class="fw-bold text-capitalize fs-1 main-color">about me</h3>
+    </div>
+    <div class="container d-flex justify-content-around align-items-center">
+      <div class="image d-none d-lg-block w-100 ">
+        <img src="imgs/about.svg" class="mw-100" alt="">
+      </div>
+      <div class="info w-100 p-color">
+        <p class="p-3 mb-4 fs-5 fw-bold bg-p text-capitalize">
+          Junior Front End Developerwith quite a bit of experience creating
+          scalable web applications I am always updating and improving my
+          technical skills in HTML5, CSS3, JS
+        </p>
+        <p class="p-3 mt-4 mb-4 fs-5 fw-bold bg-p text-capitalize">name: taha abdulrahman</p>
+        <p class="p-3 mt-4 mb-4 fs-5 fw-bold bg-p text-capitalize">age: 25</p>
+        <p class="p-3 mt-4 fs-5 fw-bold bg-p text-capitalize">adrress: Fayoum from Egypt</p>
+        <a class="p-3 fs-5 fw-bold therd-color main-transition text-capitalize"href="#contact-me">contact me</a>      </div>
+    </div>
+  </section>
+  <!-- End About -->
+  <!-- Start Skills -->
+  <section class="skills" id="skills">
+    <div class="title-section text-center">
+      <p class="text-capitalize fs-5 fw-normal p-color">My abilities
+      </p>
+      <h3 class="fw-bold text-capitalize fs-1 main-color">My skills</h3>
+    </div>
+    <div class="container">
+      <div
+        class="boxs second-color fs-4 d-flex justify-content-around align-items-center flex-column flex-lg-row text-uppercase">
+        <div class="box text-center bg-p mt-5">
+          <p class="fs-3">html</p>
+          <p class="fs-3">css</p>
+          <p class="fs-3">javascript</p>
         </div>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+        <div class="box text-center bg-p mt-5">
+          <p class="fs-3">bootstrap</p>
+          <p class="fs-3">sass</p>
+          <p class="fs-3">git</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skills -->
+  <!-- Start Services -->
+  <section class="services " id="services">
+    <div class="title-section text-center">
+      <h3 class="fw-bold text-capitalize fs-1 main-color">services</h3>
+    </div>
+    <div class="container">
+      <div class="boxs text-center text-capitalize  ">
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">security</p>
+          <img src="imgs/serv/serv1.webp" alt="">
+        </div>
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">responsive</p>
+          <img src="imgs/serv/serv2.webp" alt="">
+        </div>
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">psd design</p>
+          <img src="imgs/serv/serv3.webp" alt="">
+        </div>
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">Customer Support</p>
+          <img src="imgs/serv/serv4.webp" alt="">
+        </div>
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">Design Trends</p>
+          <img src="imgs/serv/serv5.webp" alt="">
+        </div>
+        <div class="box bg-p main-transition rad-10 position-relative">
+          <p class="second-color fs-2">High Quality</p>
+          <img src="imgs/serv/serv6.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Services -->
+  <!-- Start My-Work -->
+  <section class="mywork" id="mywork">
+    <div class="title-section text-center">
+      <h3 class="fw-bold text-capitalize fs-1 main-color">my-work</h3>
+    </div>
+    <div class="container">
+      <div class="boxs text-center text-capitalize">
+        <div class="box main-transition rad-10">
+          <a href="https://tahaabdulrahmman.github.io/NMEC/" target="_blank">
+            <img class="w-100 rad-10" src="imgs/work/nmec.webp" alt="">
+            <div class="caption w-100 fs-2 rad-10 main-transition m-0">
+              <p class="main-color m-0 text-uppercase">nmec</p>
+            </div>
+          </a>
+        </div>
+        <div class="box p-color main-transition rad-10">
+          <a href="https://tahaabdulrahmman.github.io/Elzero/" target="_blank">
+            <img class="w-100 rad-10" src="imgs/work/elzero.webp " alt="">
+            <div class="caption w-100 fs-2 rad-10 main-transition m-0">
+              <p class="m-0 main-color">elzero</p>
+            </div>
+          </a>
+        </div>
+        <div class="box main-transition rad-10">
+          <a class="main-color" href="https://tahaabdulrahmman.github.io/Kasper/" target="_blank">
+            <img class="w-100 h-100 rad-10" src="imgs/work/kasper.webp" alt="">
+            <div class="caption w-100 fs-2 rad-10 main-transition m-0">
+              <p class="m-0 main-color">kasper</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End My-Work -->
+  <!-- Start Contact-Me -->
+  <section class="contact-me pb-0" id="contact-me">
+    <div class="container d-flex align-items-start flex-column flex-lg-row">
+      <div class="info text-center p-3 mb-5">
+        <div class="title-section text-center mb-4">
+          <h3 class="fw-bold text-capitalize fs-2 main-color">Talk to me</h3>
+        </div>
+        <div class="p-2 w-100 ">
+          <img class="w-50 rounded-circle" src="imgs/logo.webp" alt="">
+          <p class="fs-3 second-color mt-5 text-capitalize">if you have question,or just wannt to get in touch ,use
+            form
+            below welook forward hearing from you</p>
+        </div>
+      </div>
+      <form id="form" class="contactform p-3 d-flex align-items-center justify-content-center flex-column bg-p">
+        <div class="title-section text-center mb-4">
+          <h3 class="fw-bold text-capitalize fs-2 main-color">Contact Me</h3>
+        </div>
+        <div class="w-100 ">
+          <input class="w-100 p-2 ps-4 pe-4 border-0 rad-10 mb-2 mb-lg-4 second-color" type="text" 
+          name="name" id="name" placeholder="Insert Your Name" required>
+        </div>
+        <div class="w-100">
+          <input class="email w-100 p-2 ps-4 pe-4 border-0 rad-10 mb-2 mb-lg-4 second-color" type="email" 
+          name="email" id="email" placeholder="jhjkjk@gmail.com" required>
+        </div>
+        <div class="w-100">
+          <textarea class="massege w-100 p-3 ps-4 border-0 rad-10 mb-4 second-color" name="message" 
+          id ="message" placeholder="Write Your message" required></textarea>
+        </div>
+        <div class="submit pb-1">
+          <button class="btn btn-warning fs-4" id="button" name="button" value="Send">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/w5fCIhI0FyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- End About -->
+  <!-- Start foteer -->
+  <footer class="bg-p pt-2 pb-2 position-relative">
+    <div class="container text-center d-flex justify-content-center align-items-center flex-sm-column flex-lg-row">
+      <p class=" fs-xl-5  fw-bold mb-0 p-1 second-color">
+        Made With
+        <i class="fa fa-heart c-main heart "></i>
+        By Taha Abdulrahmman © 2022
+      </p>
+      <div class="mysocial d-flex justify-content-center align-items-center">
+        <a href="https://www.facebook.com/profile.php?id=100012525938175" class="face p-2 rounded-25" target="_blank"><i
+            class="fab fa-facebook-f fa-2x"></i></a>
+        <a href="https://www.instagram.com/taha_abdulrahmman/" class="insta p-2" target="_blank"><i
+            class="fa-brands fa-instagram-square fa-2x"></i></a>
+        <a href="https://github.com/TahaAbdulrahmman" class="git p-2" target="_blank"><i
+            class="fab fa-github-square  fa-2x"></i></a>
+        <a href="https://wsend.co/201019893766" class="whats p-2" target="_blank"><i
+            class="fab fa-whatsapp-square fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- End foteer -->
+  <div class="btnscroll position-fixed bottom-0 end-0 pt-2 me-4 mb-3" >
+    <button class="btn-warning p-2 rad-10" id="scrolltop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+  <div id="loading" class="loading ">
+    <span class="dotted-loading"></span>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
