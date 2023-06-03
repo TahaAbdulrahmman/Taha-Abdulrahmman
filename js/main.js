@@ -116,5 +116,5 @@ window.addEventListener("load",function(){
     document.body.style.overflow = "unset";
     loadPage.remove()
     timeload.remove()
-  },2000)
+  },1000)
 })
