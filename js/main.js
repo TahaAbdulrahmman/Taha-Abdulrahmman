@@ -13,9 +13,9 @@ let homeClass =document.querySelector("nav .home");
 let logoClass =document.querySelector("nav #logo");
 window.addEventListener("scroll",function(){  
   if(scrollY < 500){
-    btnScroll.classList.add("block")
+    btnScroll.style.display = "none"
   }else{
-    btnScroll.classList.add("btnscroll")
+    btnScroll.style.display = "block"
   }
 })
 btnScroll.addEventListener("click",scrollTop0)
